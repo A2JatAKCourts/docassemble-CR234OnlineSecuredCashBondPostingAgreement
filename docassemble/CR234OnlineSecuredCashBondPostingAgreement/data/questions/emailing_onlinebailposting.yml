@@ -16,7 +16,7 @@ code: |
       robot_end # event
     # self_preparation  
     # clerk_email_prep
-    if clerk_email_sent_ok:
+    if email_code: 
       # snapshot_email
       email_sent
     else:
@@ -218,9 +218,10 @@ code: |
   # recipient = 'onlinebailposting@akcourts.gov'
   recipient = 'crobinson@akcourts.gov'
   if task_not_yet_performed('clerk_email_sent'):
-    clerk_email_sent_ok = al_court_bundle.send_email(to=recipient, reply_to=users[0].email, template=clerk_email, task = "clerk_email_sent")
-  if task_not_yet_performed('user_email_sent'):  
-    user_email_sent_ok = al_user_bundle.send_email(to=users[0].email, reply_to=recipient, template=al_user_bundle.send_email_template, task = "user_email_sent")
+    clerk_email_sent_ok = al_court_bundle.send_email(to=recipient, reply_to=users[0].email, template=clerk_email, task = 'clerk_email_sent')
+  if task_not_yet_performed('user_email_sent'):
+    user_email_sent_ok = al_user_bundle.send_email(to=users[0].email, reply_to=recipient, template=al_user_bundle.send_email_template, task = 'user_email_sent')
+  email_code = True
 ---
 id: email confirmation page
 continue button field: email_sent
