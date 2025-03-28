@@ -77,31 +77,31 @@ subquestion: |
   Their
   % endif
   email address is: ${ users[0].email}
----
-id: ending screen
-event: ending_screen
-question: |
-  View and download your form
-subquestion: |
-  % if clerk_email_sent_ok:
-  **Note:** Your form was already submitted to the clerk.
-  % else:
-  **Note:** Your form was not submitted to the clerk.
-  % endif
-  
-  % if user_email_sent_ok:
-  **Note:** Your form was already sent to you
-  % else:
-  **Note:** Your form was not sent to you.
-  % endif
-  
-under: |
-  ###### **Questions?**  
-  ###### If you are wondering about the status of your request to post bail online for an individual, you can send an email inquiry to onlinebailposting@akcourts.gov. Please keep in mind that the court can only reply to the emails during processing hours listed [here](https://courts.alaska.gov/trialcourts/bail.htm). The court replies to all emails as quickly as possible and appreciates your patience.
-  
-buttons:
-  - Exit: exit
-  - Restart: restart
+#---
+#id: ending screen
+#event: ending_screen
+#question: |
+#  View and download your form
+#subquestion: |
+#  % if clerk_email_sent_ok:
+#  **Note:** Your form was already submitted to the clerk.
+#  % else:
+#  **Note:** Your form was not submitted to the clerk.
+#  % endif
+#  
+#  % if user_email_sent_ok:
+#  **Note:** Your form was already sent to you
+#  % else:
+#  **Note:** Your form was not sent to you.
+#  % endif
+#  
+#under: |
+#  ###### **Questions?**  
+#  ###### If you are wondering about the status of your request to post bail online for an individual, you can send an email inquiry to onlinebailposting@akcourts.gov. Please keep in mind that the court can only reply to the emails during processing hours listed [here](https://courts.alaska.gov/trialcourts/bail.htm). The court replies to all emails as quickly as possible and appreciates your patience.
+#  
+#buttons:
+#  - Exit: exit
+#  - Restart: restart
 ---
 id: robot end
 event: robot_end
@@ -225,6 +225,13 @@ subquestion: |
   If you submitted it during processing hours, the court will contact you shortly with instructions and a link on how to pay bail online. If you sent it outside this time frame, you may need to wait for confirmation until processing hours.
 
   **Important:** Read the reply email from the court for what to do next. 
+under: |
+  ###### **Questions?**  
+  ###### If you are wondering about the status of your request to post bail online for an individual, you can send an email inquiry to onlinebailposting@akcourts.gov. Please keep in mind that the court can only reply to the emails during processing hours listed [here](https://courts.alaska.gov/trialcourts/bail.htm). The court replies to all emails as quickly as possible and appreciates your patience.
+  
+buttons:
+  - Exit: exit
+  - Restart: restart
 
 # To download your form or email it to yourself, click **Next**. It may take a minute to get to the next screen. You do not need to refresh.
 ---
