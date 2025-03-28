@@ -153,7 +153,7 @@ subquestion: |
   Monday through Friday: 8am to 4pm
 
   **Note:**
-  This may take several hours.
+  This may take several hours.  The form will also be emailed to you
   
 # fields:
 #   - "Email your form now?": confirm_email_send_now
