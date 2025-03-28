@@ -153,7 +153,7 @@ subquestion: |
   Monday through Friday: 8am to 4pm
 
   **Note:**
-  This may take several hours.  The form will also be emailed to you
+  This may take several hours.  The form will also be emailed to you.
   
 # fields:
 #   - "Email your form now?": confirm_email_send_now
@@ -226,7 +226,7 @@ subquestion: |
 
   **Important:** Read the reply email from the court for what to do next. 
 
-  To download your form or email it to yourself, click **Next**. It may take a minute to get to the next screen. You do not need to refresh.
+# To download your form or email it to yourself, click **Next**. It may take a minute to get to the next screen. You do not need to refresh.
 ---
 id: email send error
 continue button field: email_not_sent
