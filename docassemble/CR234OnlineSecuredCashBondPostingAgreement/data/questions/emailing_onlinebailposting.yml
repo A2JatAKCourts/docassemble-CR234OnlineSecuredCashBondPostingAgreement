@@ -69,7 +69,7 @@ subquestion: |
   % else:
   their
   % endif
-  bail online.
+  bond online.
   
   % if person_filing == "obo":
   ${ defendants[0].name.full(middle="full")  }'s friend or family member"s 
@@ -97,7 +97,7 @@ subquestion: |
 #  
 #under: |
 #  ###### **Questions?**  
-#  ###### If you are wondering about the status of your request to post bail online for an individual, you can send an email inquiry to onlinebailposting@akcourts.gov. Please keep in mind that the court can only reply to the emails during processing hours listed [here](https://courts.alaska.gov/trialcourts/bail.htm). The court replies to all emails as quickly as possible and appreciates your patience.
+#  ###### If you are wondering about the status of your request to post bond online for an individual, you can send an email inquiry to onlinebailposting@akcourts.gov. Please keep in mind that the court can only reply to the emails during processing hours listed [here](https://courts.alaska.gov/trialcourts/bail.htm). The court replies to all emails as quickly as possible and appreciates your patience.
 #  
 #buttons:
 #  - Exit: exit
@@ -114,7 +114,7 @@ id: are you sure
 question: |
   Your form is ready to be submitted to the clerk
 subquestion: |
-  When the court gets your form, they will email you. The email includes a link to the webpage where you can pay the bail. 
+  When the court gets your form, they will email you. The email includes a link to the webpage where you can pay the bond. 
   
   After you pay the full amount of 
   % if person_filing == "obo":
@@ -122,38 +122,40 @@ subquestion: |
   % else:
   your
   % endif
-  bail, the court will update 
+  bond, the court will update 
   % if person_filing == "obo":
   ${ defendants[0].name.first }'s 
   % else:
   your
   % endif
-  case records to reflect that bail has been posted. If 
+  case records to reflect that bond has been posted. If 
   % if person_filing == "obo":
   ${ defendants[0].name.first } is
   % else:
   you are
   % endif
-   in custody, the court will notify the jail that bail was posted and the jail will begin the process of releasing 
+   in custody, the court will notify the jail that bond was posted and the jail will begin the process of releasing 
     % if person_filing == "obo":
   ${ defendants[0].name.first }.
   % else:
   you.
   % endif 
   
-  The court only processes requests to post bail online during the following times:
+  The court only processes requests to post bond online during the following times:
   
   
   **In-custody Defendants**  
-  Monday through Friday: 8am to 4pm  
-  Saturday, Sunday, and [Holidays](https://courts.alaska.gov/main/holidays.htm): 10am to 3pm
+  Monday through Friday: 8:00 AM - 4:00 PM (excluding holidays) 
+  Saturday, Sunday, and [Holidays](https://courts.alaska.gov/main/holidays.htm): 10:00 AM - 3:00 PM
   
   
   **Out-of-custody Defendants**  
-  Monday through Friday: 8am to 4pm
+  Monday through Friday: 8:00 AM to 4:00 PM (excluding holidays)
 
   **Note:**
-  This may take several hours.  The form will also be emailed to you.
+  This may take several hours.
+  
+  When you submit the form to the clerk, a copy of the form will also be emailed to you.
   
 # fields:
 #   - "Email your form now?": confirm_email_send_now
@@ -167,20 +169,18 @@ continue button label: Submit form to the clerk
 
 
 under: | 
-  Online bail payments can be made with a VISA or MasterCard credit card or debit card. You cannot pay with an American Express or Discover card.
+  Online bond payments can be made with a VISA or MasterCard credit card or debit card. You cannot pay with an American Express or Discover card.
 
-  Each credit card transaction will be assessed a 3% convenience fee. If/when bail is later returned (exonerated) to the payer, the fee will not be returned.
+  Each credit card transaction will be assessed a 3% convenience fee. If/when bond is later returned (exonerated) to the payer, the fee will not be returned.
 
-  If bail is more than $97,000, the person posting bail must make more than one payment until the total amount paid equals the total of bail. For example, if bail is $250,000, make three payments: Payment 1 = $95,000 + 3% fee, Payment 2 = $95,000 + 3% fee, and Payment 3= $60,000 + 3% fee. A single payment cannot exceed $99,999 including the 3% convenience fee.
+  If bond is more than $97,000, the person posting bond must make more than one payment until the total amount paid equals the total of bond. For example, if bond is $250,000, make three payments: Payment 1 = $95,000 + 3% fee, Payment 2 = $95,000 + 3% fee, and Payment 3= $60,000 + 3% fee. A single payment cannot exceed $99,999 including the 3% convenience fee.
 
 ---
 template: al_user_bundle.send_email_template
 subject: |
   Your court form
 content: |
-  A copy of the form you submitted to the online bail posting clerk is attached. 
-
-  If you have any questions or want to check the status of the bail you posted, send an email inquiry to [onlinebailposting@akcourts.gov](mailto:onlinebailposting@akcourts.gov).  Please keep in mind that the court can only reply to the emails during processing hours listed [here](https://courts.alaska.gov/trialcourts/bail.htm).  The court replies to all emails as quickly as possible and appreciates your patience.
+  A copy of the form you submitted to the online bond posting clerk is attached.
   
   If your contact information changes and you do not inform the court, you may not receive your money back when the case ends.  To update your contact information file [TF-955](https://public.courts.alaska.gov/web/forms/docs/tf-955.pdf).  
 ---
@@ -200,7 +200,7 @@ content: |
   % else:
   their
   % endif
-  bail online.
+  bond online.
   
   ${ users[0].name.full(middle="full") }'s email address is: ${ users[0].email}
 ---
@@ -222,12 +222,12 @@ question: |
 subquestion: |
   **Your form was submitted to the court.**
   
-  If you submitted it during processing hours, the court will contact you shortly with instructions and a link on how to pay bail online. If you sent it outside this time frame, you may need to wait for confirmation until processing hours.
+  If you submitted it during processing hours, the court will contact you shortly with instructions and a link on how to pay bond online. If you sent it outside this time frame, you may need to wait for confirmation until processing hours.
 
   **Important:** Read the reply email from the court for what to do next. 
 under: |
   ###### **Questions?**  
-  ###### If you are wondering about the status of your request to post bail online for an individual, you can send an email inquiry to onlinebailposting@akcourts.gov. Please keep in mind that the court can only reply to the emails during processing hours listed [here](https://courts.alaska.gov/trialcourts/bail.htm). The court replies to all emails as quickly as possible and appreciates your patience.
+  ###### If you are wondering about the status of your request to post bond online for an individual, you can send an email inquiry to onlinebailposting@akcourts.gov. Please keep in mind that the court can only reply to the emails during processing hours listed [here](https://courts.alaska.gov/trialcourts/bail.htm). The court replies to all emails as quickly as possible and appreciates your patience.
   
 buttons:
   - Exit: exit

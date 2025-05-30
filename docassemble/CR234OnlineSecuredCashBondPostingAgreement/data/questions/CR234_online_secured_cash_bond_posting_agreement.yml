@@ -178,7 +178,7 @@ fields:
     datatype: yesnowide
 validation code: |
   if not read_cr233:
-    validation_error("You cannot continue until you have seleceted that you have read the Summary.")  
+    validation_error("You cannot continue until you have selected that you have read the Summary.")  
 ---
 id: money
 question: |
@@ -200,12 +200,12 @@ validation code: |
 id: Money Deposit
 question: |
   % if person_filing == "obo":
-  **If ${ defendants[0].name.first } follows** the conditions of the bond, the court will cancel the bond.
+  If ${ defendants[0].name.first } follows the conditions of the bond, the court will cancel the bond.
   % else: 
-  **If I follow** the conditions of the bond, the court will cancel the bond.
+  If I follow the conditions of the bond, the court will cancel the bond.
   % endif
 fields:
-  - If the court cancels the bond, what do you want the court to do with your money?: money_deposit
+  - If you are convicted of the offence, what do you want the court to do with any canceled bond money?: money_deposit
     label above field: True
     datatype: radio
     code: |
@@ -240,7 +240,7 @@ validation code: |
 id: bond conditions defendant
 question: |
   ####**If I do not follow** the conditions of the bond, the court will forfeit the money to the State of Alaska.  
-  ####The court will send me notice of forfeiture to the mailing or email address I provide.     
+  ####The court will send me notice of forfeiture to the email address I provide.     
 fields:
   - I understand and agree.: forfeit_deposit_def
     datatype: yesnowide
@@ -252,7 +252,7 @@ mandatory: True
 id: bond conditions obo
 question: |
   ####**If ${ defendants[0].name.first } does not follow** the conditions of the bond, the court will forfeit the money to the State of Alaska.
-  ####The court will send me notice of forfeiture to the mailing or email address I provide.      
+  ####The court will send me notice of forfeiture to the email address I provide.
 fields:
   - I understand and agree.: forfeit_deposit_obo
     datatype: yesnowide
@@ -263,7 +263,7 @@ validation code: |
 id: custody defendant
 question: |
   ####If I am in custody, the jail will not release me until the full bond amount has been posted for every case that has a bond requirement.  
-  ####The court will only notify the jail of bond payments made during [online bail processing hours](https://courts.alaska.gov/trialcourts/bail.htm).  It may take the jail a few hours after notification from the court to release me.
+  ####The court will only notify the jail when full bond payment has been made, during [online bail processing hours](https://courts.alaska.gov/trialcourts/bail.htm).  It may take the jail a few hours after notification from the court to release me.
 fields:
   - I understand and agree.: custody_def
     datatype: yesnowide
@@ -274,7 +274,7 @@ validation code: |
 id: custody defendant obo
 question: |
   ####If ${ defendants[0].name.first } is in custody, the jail will not release ${ defendants[0].name.first } until the full bond amount has been posted for every case that has a bond requirement.
-  ####The court will only notify the jail of bond payments made during [online bail processing hours](https://courts.alaska.gov/trialcourts/bail.htm).  It may take the jail a few hours after notification from the court to release ${ defendants[0].name.first}.
+  ####The court will only notify the jail when full bond payment has been made, during [online bail processing hours](https://courts.alaska.gov/trialcourts/bail.htm).  It may take the jail a few hours after notification from the court to release ${ defendants[0].name.first}.
 fields:
   - I understand and agree.: custody_obo
     datatype: yesnowide
