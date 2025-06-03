@@ -198,6 +198,7 @@ validation code: |
     validation_error("You cannot continue until you agree.")  
 ---
 id: Money Deposit
+css class: no-required-asterisk
 question: |
   % if person_filing == "obo":
   If ${ defendants[0].name.first } follows the conditions of the bond, the court will cancel the bond.  
@@ -214,7 +215,7 @@ fields:
   - no label: money_deposit
     label above field: True
     datatype: radio
-    required: True
+    css class: no-required-asterisk
     code: |
       money_deposit_choices    
 ---
