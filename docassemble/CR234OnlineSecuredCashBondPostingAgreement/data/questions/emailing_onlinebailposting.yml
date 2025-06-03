@@ -207,8 +207,8 @@ content: |
 code: |
   # recipient = get_config('cook after hours email')
   user = users[0].email
-  # recipient = 'onlinebailposting@akcourts.gov'
-  recipient = 'mbento@akcourts.gov'
+  recipient = 'onlinebailposting@akcourts.gov'
+  # recipient = 'mbento@akcourts.gov'
   if task_not_yet_performed('clerk_email_sent'):
     clerk_email_sent_ok = al_court_bundle.send_email(to=recipient, reply_to=users[0].email, template=clerk_email, task = 'clerk_email_sent')
   if task_not_yet_performed('user_email_sent'):
