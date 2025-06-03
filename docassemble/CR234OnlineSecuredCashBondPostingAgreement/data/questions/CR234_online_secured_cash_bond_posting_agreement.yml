@@ -200,18 +200,21 @@ validation code: |
 id: Money Deposit
 question: |
   % if person_filing == "obo":
-  ####If ${ defendants[0].name.first } follows the conditions of the bond, the court will cancel the bond.  
-  
-  ####If ${ defendants[0].name.first } is convicted of the offense, what do you want the court to do with any canceled bond money?
+  If ${ defendants[0].name.first } follows the conditions of the bond, the court will cancel the bond.  
   % else: 
-  ####If you follow the conditions of the bond, the court will cancel the bond.
-  
-  ####If you are convicted of the offence, what do you want the court to do with any canceled bond money?
+  If you follow the conditions of the bond, the court will cancel the bond.
+  % endif
+subquestion: |
+  % if person_filing == "obo":
+  **If ${ defendants[0].name.first } is convicted** of the offense, what do you want the court to do with any canceled bond money?
+  % else: 
+  **If you are convicted** of the offense, what do you want the court to do with any canceled bond money?
   % endif
 fields:
   - no label: money_deposit
     label above field: True
     datatype: radio
+    required: True
     code: |
       money_deposit_choices    
 ---

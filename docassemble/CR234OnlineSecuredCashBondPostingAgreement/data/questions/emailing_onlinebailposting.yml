@@ -145,12 +145,12 @@ subquestion: |
   
   
   **In-custody Defendants**  
-  Monday through Friday: 8:00 AM - 4:00 PM (excluding holidays) 
+  Monday through Friday: 8:00 AM - 4:00 PM (excluding holidays)<br>
   Saturday, Sunday, and [Holidays](https://courts.alaska.gov/main/holidays.htm): 10:00 AM - 3:00 PM
   
   
   **Out-of-custody Defendants**  
-  Monday through Friday: 8:00 AM to 4:00 PM (excluding holidays)
+  Monday through Friday: 8:00 AM - 4:00 PM (excluding holidays)
 
   **Note:**
   This may take several hours.
@@ -173,7 +173,7 @@ under: |
 
   Each credit card transaction will be assessed a 3% convenience fee. If/when bond is later returned (exonerated) to the payer, the fee will not be returned.
 
-  If bond is more than $97,000, the person posting bond must make more than one payment until the total amount paid equals the total of bond. For example, if bond is $250,000, make three payments: Payment 1 = $95,000 + 3% fee, Payment 2 = $95,000 + 3% fee, and Payment 3= $60,000 + 3% fee. A single payment cannot exceed $99,999 including the 3% convenience fee.
+  If bond is more than $97,000, the person posting bond must make more than one payment until the total amount paid equals the total bond. For example, if bond is $250,000, make three payments: Payment 1 = $95,000 + 3% fee, Payment 2 = $95,000 + 3% fee, and Payment 3= $60,000 + 3% fee. A single payment cannot exceed $99,999 including the 3% convenience fee.
 
 ---
 template: al_user_bundle.send_email_template
